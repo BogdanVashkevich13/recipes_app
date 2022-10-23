@@ -42,7 +42,9 @@ class firstScreen extends ConsumerWidget  {
                       height: 150,
                       color: Colors.white24,
                       child: OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/alcoholicPage');
+                          },
                           child: Image.asset('images/alcoholic.png'),
                       ),
                     ),
@@ -52,7 +54,9 @@ class firstScreen extends ConsumerWidget  {
                       height: 150,
                       width: 150,
                       child: OutlinedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/nonAlcoholicPage');
+                        },
                         child: Image.asset('images/noalcohol.png'),
                       ),
                     ),
@@ -96,7 +100,9 @@ class firstScreen extends ConsumerWidget  {
                           width: 150,
                           height: 150,
                           child:OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/ordinaryPage');
+                            },
                             child: Image.asset('images/ordinary drink.png'),
                           ),
                         ),
@@ -106,7 +112,9 @@ class firstScreen extends ConsumerWidget  {
                           height: 150,
                           width: 150,
                           child: OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/cocktailsPage');
+                            },
                             child: Image.asset('images/cocktails.png'),
                           ),
                         ),
@@ -139,44 +147,44 @@ class firstScreen extends ConsumerWidget  {
             ],
           ),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 30, left: 25),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      child: Row(
-                        children: [
-                          Container(
-                            color: Colors.white24,
-                            width: 150,
-                            height: 150,
-                            child: OutlinedButton(
-                              onPressed: () {},
-                              child: Image.asset('images/random.png'),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.only(left: 45, top: 5),
-                      child: Text('Ramdom',
-                        style: TextStyle(
-                          fontSize: 15,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+          // Padding(
+          //   padding: EdgeInsets.only(top: 30, left: 25),
+          //   child: Column(
+          //     children: [
+          //       Row(
+          //         children: [
+          //           Container(
+          //             child: Row(
+          //               children: [
+          //                 Container(
+          //                   color: Colors.white24,
+          //                   width: 150,
+          //                   height: 150,
+          //                   child: OutlinedButton(
+          //                     onPressed: () {},
+          //                     child: Image.asset('images/random.png'),
+          //                   ),
+          //                 ),
+          //               ],
+          //             ),
+          //           ),
+          //         ],
+          //       ),
+                // Row(
+                //   children: [
+                //     Container(
+                //       padding: EdgeInsets.only(left: 45, top: 5),
+                //       child: Text('Ramdom',
+                //         style: TextStyle(
+                //           fontSize: 15,
+                //         ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
+              //],
+            //),
+         // ),
         ],
       ),
     );
