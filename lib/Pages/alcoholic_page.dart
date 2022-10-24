@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../Colors/colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
 
 class alcoholicPage extends ConsumerWidget {
   const alcoholicPage({Key? key}) : super(key: key);

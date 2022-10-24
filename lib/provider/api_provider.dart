@@ -6,14 +6,12 @@ import 'package:recipes_app/states/state_task.dart';
 
 import '../states/drink_option.dart';
 
-final drinkApiProvider = StateNotifierProvider<Drink, Repository>((ref) {
-  return drinkApiProvider(ref);
+final drinkApiProvider = StateNotifierProvider<DrinkApi, Repository>((ref) {
+  return DrinkApi(ref);
 });
 
-class drinkApiProvider extends StateNotifier<Drink> {
-  drinkApiProvider(this.ref)
-      : super((
-  ));
+class DrinkApi extends StateNotifier<Drink> {
+  DrinkApi() : super(());
   static const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/';
   Future<List<DrinkOption>> getDrinkOptions(String search) async {
 

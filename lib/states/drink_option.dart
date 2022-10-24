@@ -5,9 +5,9 @@ class DrinkOption {
   String idDrink;
 
   DrinkOption({
-    this.strDrink,
-    this.strDrinkThumb,
-    this.idDrink,
+    required this.strDrink,
+    required this.strDrinkThumb,
+    required this.idDrink,
   });
 
   factory DrinkOption.fromJson(Map<String, dynamic> json) {
