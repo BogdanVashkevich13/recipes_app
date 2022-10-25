@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import '../Colors/colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -27,6 +28,15 @@ class alcoholicPage extends ConsumerWidget {
         backgroundColor: ColorsSet.mint,
       ),
       backgroundColor: ColorsSet.gray,
+      body:SingleChildScrollView(
+        child: Container(
+          child: ListView(
+            children: [
+              Text('')
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -5,6 +5,7 @@ import '../Pages/alcoholic_page.dart';
 import '../Pages/cocktails_page.dart';
 import '../Pages/non_alcoholic_page.dart';
 import '../Pages/ordinary_drink_page.dart';
+import '../Wigets/list_drinks.dart';
 import '../firstScreen/first_screen.dart';
 import '../startScreen/start_screen.dart';
 void main()  {
