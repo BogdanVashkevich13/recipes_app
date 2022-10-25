@@ -6,10 +6,10 @@ class Drink {
   String strInstructions;
 
   Drink({
-    this.strDrink,
-    this.strDrinkThumb,
-    this.idDrink,
-    this.strInstructions,
+    required this.strDrink,
+    required this.strDrinkThumb,
+    required this.idDrink,
+    required this.strInstructions,
   });
 
   factory Drink.fromJson(Map<String, dynamic> json) {

@@ -15,19 +15,31 @@ class DrinkApi extends StateNotifier<Drink> {
     strInstructions: '',
     idDrink: '',
   ));
-
   String _apiKey = "1";
   final Ref ref;
 
   Future<Drink> getDrinkDetails(String id) async {
-    var url = Uri.https('https://www.thecocktaildb.com/api/json/v1/1/';
-  });
-  Response response = await get(url);
-  if (response.statusCode == 200) {
-  final items = json.decode(response.body);
-  Drink drinkDetails = Drink.fromJson(items);
-  return drinkDetails;
-  } else {
-  throw Exception('Failed to load internet');
+    var url = Uri.https('https://www.thecocktaildb.com/api/json/v1/1/');
+    var response = await get(url);
+    if (response.statusCode == 200) {
+      final items = json.decode(response.body);
+      Drink drinkDetails = Drink.fromJson(items);
+      return drinkDetails;
+    } else {
+      throw Exception('Failed to load internet');
+    }
   }
+
+  Future<Drink> getDrinkOptions(String id) async {
+    var url = Uri.https('https://www.thecocktaildb.com/api/json/v1/1/');
+    var response = await get(url);
+    if (response.statusCode == 200) {
+      final items = json.decode(response.body);
+      Drink drinkDetails = Drink.fromJson(items);
+      return drinkDetails;
+    } else {
+      throw Exception('Failed to load internet');
+    }
+  }
+
 }
