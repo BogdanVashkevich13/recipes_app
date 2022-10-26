@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../states/drink_optin.dart';
 import '../states/drink_state.dart';

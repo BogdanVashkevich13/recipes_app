@@ -37,10 +37,10 @@ class _DrinkDetailsState extends State<DrinkDetails> {
                 flex: 3,
                 child: Container(
                   margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                  child: new ClipRRect(
+                  child: ClipRRect(
                     borderRadius: new BorderRadius.circular(8.0),
                     child: new CachedNetworkImage(
-                        imageUrl: snapshot.data!.strDrinkThumb
+                        imageUrl: snapshot.data!.strDrinkThumb,
                     ),
                   ),
                 ),

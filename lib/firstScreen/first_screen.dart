@@ -45,7 +45,7 @@ class firstScreen extends ConsumerWidget  {
                           Navigator.push(
                               context,
                             PageTransition(
-                                child: ListDrinks(key: null ,search: '', title: '',),
+                                child: const ListDrinks(key: null ,search: '', title: '',),
                                 type: PageTransitionType.rightToLeft
                             ),
                           );
