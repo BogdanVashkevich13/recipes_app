@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:recipes_app/Wigets/list_drinks.dart';
 import '../Colors/colors.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class firstScreen extends ConsumerWidget  {
   const firstScreen({Key? key}) : super(key: key);
@@ -38,14 +40,34 @@ class firstScreen extends ConsumerWidget  {
                 child: Row(
                   children: [
                     Container(
-                      width: 150,
-                      height: 150,
-                      color: Colors.white24,
-                      child: OutlinedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/alcoholicPage');
-                          },
-                          child: Image.asset('images/alcoholic.png'),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                            PageTransition(
+                                child: ListDrinks(key: null ,search: '', title: '',),
+                                type: PageTransitionType.rightToLeft
+                            ),
+                          );
+                        },
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children:<Widget> [
+                            Card(
+                              shape: const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                              child: Image.asset('images/alcohol.png',
+                                width: 150,
+                                height: 150,
+                              ),
+                            ),
+                            Text('Alcohol',  style: new TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.black,
+                            ),),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(width: 42),

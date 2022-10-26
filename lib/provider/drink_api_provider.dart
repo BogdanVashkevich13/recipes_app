@@ -1,20 +1,19 @@
 import 'dart:convert';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:recipes_app/states/drink_state.dart';
-
 import '../states/drink_optin.dart';
+import '../states/drink_state.dart';
 
-final drinkApiProvider = StateNotifierProvider<DrinkApi, Drink>((ref) {
-  return DrinkApi (ref);
+final drinkApiProvider = StateNotifierProvider<DrinkApi, Drink> ((ref){
+  return DrinkApi(ref);
 });
-class DrinkApi extends StateNotifier<Drink> {
-  DrinkApi(this.ref) : super (Drink(
-    strDrink: '',
-    strDrinkThumb: '',
-    strInstructions: '',
-    idDrink: '',
-  ));
+
+class DrinkApi extends StateNotifier<Drink>{
+  DrinkApi(this.ref): super(Drink(
+      strDrink: '',
+      strDrinkThumb: '',
+      idDrink: '',
+      strInstructions: ''),);
   String _apiKey = "1";
   final Ref ref;
 
@@ -29,7 +28,6 @@ class DrinkApi extends StateNotifier<Drink> {
       throw Exception('Failed to load internet');
     }
   }
-
   Future<List<DrinkOption>> getDrinkOptions(String id) async {
     var url = Uri.https('https://www.thecocktaildb.com/api/json/v1/1/');
     var response = await get(url);
@@ -43,5 +41,4 @@ class DrinkApi extends StateNotifier<Drink> {
       throw Exception('Failed to load internet');
     }
   }
-
 }

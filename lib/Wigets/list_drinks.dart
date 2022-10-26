@@ -7,7 +7,7 @@ import 'drinks_details.dart';
 class ListDrinks extends StatefulWidget {
   final String search;
   final String title;
-  const ListDrinks({required Key key, required this.search, required this.title}): super(key: key);
+  const ListDrinks({ Key? key,  required this.search,  required this.title}): super(key: key);
   _ListDrinksState createState() => _ListDrinksState();
 }
 
