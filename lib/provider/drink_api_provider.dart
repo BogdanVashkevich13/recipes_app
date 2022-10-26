@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../states/drink_optin.dart';
 import '../states/drink_state.dart';
+import 'dart:async';
 
 final drinkApiProvider = StateNotifierProvider<DrinkApi, Drink> ((ref){
   return DrinkApi(ref);
