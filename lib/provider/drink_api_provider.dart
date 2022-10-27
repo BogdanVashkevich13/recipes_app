@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../states/drink_optin.dart';
 import '../states/drink_state.dart';
 import 'dart:async';
+import 'package:http/http.dart';
 
 final drinkApiProvider = StateNotifierProvider<DrinkApi, Drink> ((ref){
   return DrinkApi(ref);
@@ -18,7 +19,7 @@ class DrinkApi extends StateNotifier<Drink>{
   final Ref ref;
 
   Future<Drink> getDrinkDetails(String id) async {
-    var url = Uri.https('https://www.thecocktaildb.com/api/json/v1/1/');
+    var url = Uri.http('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a');
     var response = await get(url);
     if (response.statusCode == 200) {
       final items = json.decode(response.body);
@@ -29,7 +30,7 @@ class DrinkApi extends StateNotifier<Drink>{
     }
   }
   Future<List<DrinkOption>> getDrinkOptions(String id) async {
-    var url = Uri.https('https://www.thecocktaildb.com/api/json/v1/1/');
+    var url = Uri.https('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007');
     var response = await get(url);
     if (response.statusCode == 200) {
       final items = json.decode(response.body)['drinks'];

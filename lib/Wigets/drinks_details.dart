@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import '../provider/repository.dart';
 import '../states/drink_state.dart';
-import '../states/repository.dart';
+
 
 class DrinkDetails extends StatefulWidget {
   final String id;
