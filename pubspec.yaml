@@ -31,7 +31,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_riverpod: ^1.0.4
+  flutter_bloc: ^8.1.1
+  http: ^0.13.5
+  cached_network_image: ^3.2.2
+  page_transition: ^2.0.9
+  pull_to_refresh: ^2.0.0
+  equatable: ^2.0.5
+  google_fonts: ^3.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -40,15 +46,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  provider: ^6.0.3
-  google_fonts: ^3.0.1
-  dio: ^4.0.6
-  http: ^0.13.5
-  equatable: ^2.0.5
-  cached_network_image: ^3.2.2
-  pull_to_refresh: ^2.0.0
-  flutter_bloc: ^8.1.1
-  page_transition: ^2.0.9
+
 
 
   # The "flutter_lints" package below contains a set of recommended lints to
