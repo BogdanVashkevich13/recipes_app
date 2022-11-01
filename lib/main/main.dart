@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:recipes_bloc/Pages/home_page.dart';
-import 'package:recipes_bloc/Pages/loading_screen.dart';
+import '../Pages/home_page.dart';
+import '../Pages/loading_screen.dart';
 
 
 
