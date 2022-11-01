@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:recipes_app/Colors/colors.dart';
 import '../Api/drink.dart';
 import '../Api/repository.dart';
 
@@ -46,9 +47,18 @@ class _DrinkRandomState extends State<DrinkRandom> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        backgroundColor: ColorsSet.red,
+        title: Text(title,
+        style: const TextStyle(
+          color: ColorsSet.black,
+          fontStyle: FontStyle.italic,
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+        ),
+        ),
         centerTitle: true,
       ),
+      backgroundColor: Colors.white,
       body: new SmartRefresher(
         enablePullDown: true,
         enablePullUp: false,
@@ -83,7 +93,6 @@ class _DrinkRandomState extends State<DrinkRandom> {
                   ),
                 ),
               ),
-              flex: 4,
             ),
           ],
         ),

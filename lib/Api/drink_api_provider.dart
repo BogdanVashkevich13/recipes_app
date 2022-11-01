@@ -11,7 +11,7 @@ class DrinkApiProvider {
 
   Future<List<DrinkOption>> getDrinkOptions(String search) async {
 
-    var url = Uri.http('https://www.thecocktaildb.com/api/json/v1/1/search.php?${search}');
+    var url = Uri.https('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a');
     Response response = await get(url);
 
     if (response.statusCode == 200) {
@@ -28,7 +28,7 @@ class DrinkApiProvider {
 
   Future<Drink> getDrinkDetails(String id) async {
 
-    var url = Uri.https('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}');
+    var url = Uri.https('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007');
     Response response = await get(url);
 
     if (response.statusCode == 200) {
