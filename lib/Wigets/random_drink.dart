@@ -7,6 +7,8 @@ import '../Api/drink.dart';
 import '../Api/repository.dart';
 
 class DrinkRandom extends StatefulWidget {
+  const DrinkRandom({super.key});
+
   _DrinkRandomState createState() => _DrinkRandomState();
 }
 
@@ -21,11 +23,11 @@ class _DrinkRandomState extends State<DrinkRandom> {
 
   Future<void> _getDrinkDetails() async {
     Repository().getDrinkRandom().then((Drink drink) {
-      this.setState(() =>
+      setState(() =>
       {
-        this.title = drink.strDrink,
-        this.imgUrl = drink.strDrinkThumb,
-        this.instructions = drink.strInstructions,
+        title = drink.strDrink,
+        imgUrl = drink.strDrinkThumb,
+        instructions = drink.strInstructions,
       });
     });
     return;
