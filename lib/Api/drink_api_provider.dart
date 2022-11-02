@@ -7,7 +7,7 @@ import 'dart:async';
 
 class DrinkApiProvider {
 
-  static const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/';
+  //static const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/';
 
   Future<List<DrinkOption>> getDrinkOptions(String search) async {
 
